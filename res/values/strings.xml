@@ -3,5 +3,6 @@
 
     <string name="hello">Hello World, ExpandablePanelActivity!</string>
     <string name="app_name">ExpandablePanel</string>
+    <string name="big_text">This is some big text. Will it be useful? This is some big text. Will it be useful? Useful at all? Might not be so at all. Need to check? Need more text. Will it be big enough. I a small screen sure. But in a big one?</string>
 
 </resources>
