@@ -1,21 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/parent_layout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical" >
 
-    <FrameLayout
-        android:id="@+id/frame"
+    <com.bean.ExpandablePanel
+        android:id="@+id/panel"
         android:layout_width="fill_parent"
-        android:layout_height="40dp" >
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:collapsedHeight="50dp"
+        app:content="@+id/text"
+        app:handle="@+id/indicator" >
 
         <TextView
-            android:id="@+id/text"
+            android:id="@id/text"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:fadingEdge="vertical"
-            android:text="@string/hello" />
-    </FrameLayout>
+            android:fadingEdgeLength="15dp"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:requiresFadingEdge="vertical"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@id/indicator"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="end"
+            android:src="@drawable/arrow_light" />
+    </com.bean.ExpandablePanel>
+
+    <com.bean.ExpandablePanel
+        android:id="@+id/panel2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:collapsedHeight="50dp"
+        app:content="@+id/text2"
+        app:handle="@+id/indicator2" >
+
+        <TextView
+            android:id="@id/text2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:fadingEdge="vertical"
+            android:fadingEdgeLength="15dp"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:requiresFadingEdge="vertical"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@id/indicator2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="end"
+            android:src="@drawable/arrow_light" />
+    </com.bean.ExpandablePanel>
+
+    <ScrollView
+        android:requiresFadingEdge="vertical"
+        android:fadingEdgeLength="10dip"
+        android:layout_width="fill_parent"
+        android:layout_height="30dip" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="60dip"
+            android:text="@string/big_text" />
+    </ScrollView>
 
 </LinearLayout>
