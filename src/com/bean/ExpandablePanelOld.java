@@ -39,13 +39,6 @@ public class ExpandablePanelOld extends LinearLayout {
 		init();
 	}
 
-	public ExpandablePanelOld(Context context, AttributeSet attrs, int defStyle) {
-		super(context, attrs, defStyle);
-		LayoutInflater inflater = (LayoutInflater) context
-				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-		inflater.inflate(R.layout.main, this);
-		init();
-	}
 
 	public ExpandablePanelOld(Context context, AttributeSet attrs) {
 		super(context, attrs);
@@ -84,7 +77,7 @@ public class ExpandablePanelOld extends LinearLayout {
 
 		mFrame = (FrameLayout) findViewById(R.id.frame);
 		LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
-				LayoutParams.MATCH_PARENT, this.mCollapsedHeight);
+				LayoutParams.FILL_PARENT, this.mCollapsedHeight);
 		mFrame.setLayoutParams(params);
 		parentView = (LinearLayout) findViewById(R.id.parent_layout);
 
@@ -165,7 +158,7 @@ public class ExpandablePanelOld extends LinearLayout {
 		mTextView.setText(mContent);
 		mFrame = (FrameLayout) findViewById(R.id.frame);
 		LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
-				LayoutParams.MATCH_PARENT, this.mCollapsedHeight);
+				LayoutParams.FILL_PARENT, this.mCollapsedHeight);
 		mFrame.setLayoutParams(params);
 
 		if (mTextView.getMeasuredHeight() < mCollapsedHeight) {
